@@ -36,6 +36,11 @@ const styles ={
    width: '100%',
    paddingLeft: '1rem',
    paddingRight: '1rem'
+  },
+  entries:{
+    display:'flex',
+    alignItems:'baseline',
+    justifyContent: 'center'
   }
 }
 function App() {
@@ -87,7 +92,8 @@ const Home=(props) => {
     <Container fluid className="App-header align-top">
           <div className="container" style={styles.title} >
             <div>{props.page.title}</div>
-            <div>{props.page.blogsCollection.total}</div>
+            <div></div>
+            <div style={styles.entries}><h5>Entries &nbsp;</h5> {props.page.blogsCollection.total}</div>
           </div>
           <Banner bannerUrl={props.page.logo.url}/>
           <Blogs/>
